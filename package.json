@@ -2,10 +2,44 @@
   "name": "tbsengine2",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "postinstall": "node .scripts/postinstall.js"
   },
   "dependencies": {
+    "@blueprintjs/core": "^1.16.0",
     "babel-runtime": "^6.20.0",
-    "meteor-node-stubs": "~0.2.4"
+    "meteor-node-stubs": "~0.2.4",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "react-mosaic-component": "^0.3.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.0.1",
+    "node-sass": "^4.5.2",
+    "postcss-modules-extract-imports": "^1.0.1",
+    "postcss-modules-local-by-default": "^1.1.1",
+    "postcss-modules-scope": "^1.0.2",
+    "postcss-modules-values": "^1.2.2",
+    "postcss-nested": "^2.0.2",
+    "postcss-simple-vars": "^4.0.0",
+    "shelljs": "^0.7.7"
+  },
+  "cssModules": {
+    "extensions": [
+      "scss"
+    ],
+    "ignorePaths": [
+      "node_modules"
+    ],
+    "postcssPlugins": {
+      "postcss-simple-vars": {},
+      "postcss-modules-values": {},
+      "postcss-nested": {},
+      "postcss-modules-local-by-default": {},
+      "postcss-modules-extract-imports": {},
+      "postcss-modules-scope": {},
+      "autoprefixer": {}
+    }
   }
 }
